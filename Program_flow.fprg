@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="trurilm"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-12 11:47:02 PM"/>
+        <attribute name="created" value="dHJ1cmlsbTsyMDIwMUNORDgyNTk0VEo7MjAyMS0wMi0xMjsxMDo1NDowMSBQTTsyOTMy"/>
+        <attribute name="edited" value="dHJ1cmlsbTsyMDIwMUNORDgyNTk0VEo7MjAyMS0wMi0xMjsxMTo0NzowMiBQTTsyOzMwNDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="userName, dogName, dogBreed" type="String" array="False" size=""/>
+            <declare name="dogAge, numOfWeeks, dogWeight, total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Welcome to the Minneapolis Dog Boarding Company! Please enter your username: &quot;" newline="True"/>
+            <input variable="userName"/>
+            <output expression="&quot;Nice to have you back {userName}! What is your dog's name?&quot;" newline="True"/>
+            <input variable="dogName"/>
+            <output expression="&quot;Okay thank you and what is {dogName}'s breed?&quot;" newline="True"/>
+            <input variable="dogBreed"/>
+            <output expression="&quot;What is {dogName}'s age?&quot;" newline="True"/>
+            <input variable="dogAge"/>
+            <output expression="&quot;And how many weeks will {dogName} be with us?&quot;" newline="True"/>
+            <input variable="numOfWeeks"/>
+            <output expression="&quot;Our last question for you is how much does {dogName} weigh?&quot;" newline="True"/>
+            <input variable="dogWeight"/>
+            <if expression="dogWeight &lt; 15">
+                <then>
+                    <output expression="55 * numOfWeeks" newline="True"/>
+                    <output expression="&quot;The total cost for {dogName}'s care will be {total}!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="dogWeight &lt; 31">
+                        <then>
+                            <output expression="75 * numOfWeeks" newline="True"/>
+                            <output expression="&quot;The total cost for {dogName}'s care will be {total}!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="dogWeight &lt; 80">
+                                <then>
+                                    <output expression="105 * numOfWeeks" newline="True"/>
+                                    <output expression="&quot;The total cost for {dogName}'s care will be {total}!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="dogWeight &gt; 80">
+                                        <then>
+                                            <output expression="125 * numOfWeeks" newline="True"/>
+                                            <output expression="&quot;The total cost for {dogName}'s care will be {total}!&quot;" newline="True"/>
+                                            <output expression="&quot;A 2% discount will be added to your bill because it exceeds $125!&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
